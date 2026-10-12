@@ -3,5 +3,8 @@
 Console.WriteLine(SumEven(numbers));
 
 static int SumEven(IEnumerable<int> numbers)
-    => numbers.Where(x => x % 2 == 0).Sum();
+    => numbers
+    .Where(x => x % 2 == 0)
+    .Where(x => x > 2)
+    .Sum();
 
